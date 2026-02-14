@@ -1,0 +1,85 @@
+{
+  "name": "@erudite-intelligence/x402-tron-v2",
+  "version": "1.0.0",
+  "description": "x402 Payment Protocol V2 - Tron Network Plugin. The first and only x402 V2 implementation for TRON, enabling USDT TRC-20 payments for AI agents and web services.",
+  "author": "Erudite Intelligence LLC <vector@eruditeintelligence.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erudite-intelligence/x402-tron-v2"
+  },
+  "keywords": [
+    "x402",
+    "tron",
+    "usdt",
+    "trc20",
+    "payments",
+    "crypto",
+    "stablecoin",
+    "ai-agents",
+    "web3",
+    "facilitator"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./exact/facilitator": {
+      "types": "./dist/exact/facilitator/index.d.ts",
+      "import": "./dist/exact/facilitator/index.mjs",
+      "require": "./dist/exact/facilitator/index.js"
+    },
+    "./exact/facilitator/register": {
+      "types": "./dist/exact/facilitator/register.d.ts",
+      "import": "./dist/exact/facilitator/register.mjs",
+      "require": "./dist/exact/facilitator/register.js"
+    },
+    "./exact/client": {
+      "types": "./dist/exact/client/index.d.ts",
+      "import": "./dist/exact/client/index.mjs",
+      "require": "./dist/exact/client/index.js"
+    },
+    "./exact/server": {
+      "types": "./dist/exact/server/index.d.ts",
+      "import": "./dist/exact/server/index.mjs",
+      "require": "./dist/exact/server/index.js"
+    },
+    "./exact/server/register": {
+      "types": "./dist/exact/server/register.d.ts",
+      "import": "./dist/exact/server/register.mjs",
+      "require": "./dist/exact/server/register.js"
+    },
+    "./exact/client/register": {
+      "types": "./dist/exact/client/register.d.ts",
+      "import": "./dist/exact/client/register.mjs",
+      "require": "./dist/exact/client/register.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@x402/core": "^2.0.0",
+    "tronweb": ">=6.0.0"
+  },
+  "devDependencies": {
+    "@x402/core": "^2.3.1",
+    "tronweb": "^6.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  }
+}
